@@ -43,15 +43,7 @@ ret = cell(ceil(len / 420),1);
 cur = 0;
 count = 0;
 
-%check big/little endian
-endian_code = fread(f,1,'*ubit8');
-if endian_code == 255
-    endian_format = 'ieee-be';
-elseif endian_code == 0
-    endian_format = 'ieee-le';
-else
-    error('Wrong endian format.');
-end
+endian_format = 'ieee-le';
 
 while cur < (len - 4)
     field_len = fread(f, 1, 'uint16', 0, endian_format);
