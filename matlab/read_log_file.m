@@ -43,7 +43,7 @@ ret = cell(ceil(len / 420),1);
 cur = 0;
 count = 0;
 
-endian_format = 'ieee-le';
+endian_format = 'ieee-be';
 
 while cur < (len - 4)
     field_len = fread(f, 1, 'uint16', 0, endian_format);
