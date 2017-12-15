@@ -71,13 +71,7 @@ int main(int argc, char* argv[])
             printf("Fail to open <output_file>, are you root?\n");
             fclose(fp);
             return 0;
-        }
-
-        if(is_big_endian())
-            endian_flag = 0xff;
-        else
-            endian_flag = 0x0;
-        fwrite(&endian_flag,1,1,fp);        
+        }   
     }
     if (argc > 2){
         printf(" Too many input arguments !\n");
