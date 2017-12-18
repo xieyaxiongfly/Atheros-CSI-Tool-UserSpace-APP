@@ -73,7 +73,7 @@ void mexFunction(int nlhs, mxArray *plhs[],
     num_tones_p = mxGetPr(prhs[3]);
     num_tones   = *num_tones_p;
 
-    int size[]  = {nr, nc, num_tones};
+    const mwSize size[]  = {nr, nc, num_tones};
 
     mxArray *csi  = mxCreateNumericArray(3, size, mxDOUBLE_CLASS, mxCOMPLEX);
     double * ptrR =(double *)mxGetPr(csi);
