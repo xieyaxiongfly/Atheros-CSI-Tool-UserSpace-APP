@@ -198,7 +198,8 @@ void record_csi_payload(unsigned char* buf_addr, csi_struct* csi_status, unsigne
     csi_addr = buf_addr + csi_st_len + 2;
     fill_csi_matrix(csi_addr,nr,nc,num_tones, csi_matrix);
 }
-void  porcess_csi(unsigned char* data_buf, csi_struct* csi_status,COMPLEX(* csi_buf)[3][114]){
+
+void  process_csi(unsigned char* data_buf, csi_struct* csi_status,COMPLEX(* csi_buf)[3][114]){
     /* here is the function for csi processing
      * you can install your own function */
     return;
